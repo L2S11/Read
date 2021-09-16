@@ -29,12 +29,14 @@ spring:
             drop-table-allow: false
 
 mybatis:
-  config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:mybatis/mapper/xueshengMapper.xml
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
-  jdbc:
-    template:
-      query-timeout: 3
+#  jdbc:
+#    template:
+#      query-timeout: 3
 
 
 

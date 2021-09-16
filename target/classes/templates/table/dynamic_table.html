@@ -854,20 +854,22 @@
         <table class="display table table-bordered" id="hidden-table-info">
         <thead>
         <tr>
-            <th>Rendering engine</th>
-            <th>Browser</th>
-            <th class="hidden-phone">Platform(s)</th>
-            <th class="hidden-phone">Engine version</th>
-            <th class="hidden-phone">CSS grade</th>
+            <th>#</th>
+            <th>ID</th>
+            <th>name</th>
+            <th >photo</th>
+            <th >home</th>
+
         </tr>
         </thead>
         <tbody>
-        <tr class="gradeX">
-            <td>Trident</td>
-            <td>Internet
+        <tr class="gradeX" th:each="teacher,stat:${teachers}">
+            <td th:text="${stat.count}" >Trident</td>
+            <td th:text="${teacher.id}">id</td>
+            <td th:text="${teacher.teacherName}">Internet
                 Explorer 4.0</td>
-            <td class="hidden-phone">Win 95+</td>
-            <td class="center hidden-phone">4</td>
+            <td class="" th:text="${teacher.photo}">Win 95+</td>
+            <td class="center hidden-phone">[[${teacher.home}]]</td>
             <td class="center hidden-phone">X</td>
         </tr>
         <tr class="gradeC">
